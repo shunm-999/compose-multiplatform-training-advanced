@@ -1,4 +1,3 @@
-import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
@@ -18,7 +17,7 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -29,7 +28,7 @@ kotlin {
             isStatic = true
         }
     }
-    
+
     sourceSets {
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -95,6 +94,14 @@ android {
     }
     dependencies {
         debugImplementation(compose.uiTooling)
+    }
+}
+
+sqldelight {
+    databases {
+        create("AppDatabase") {
+            packageName.set("com.jetbrains.kotlin.cache")
+        }
     }
 }
 
