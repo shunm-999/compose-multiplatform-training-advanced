@@ -1,9 +1,9 @@
 package org.example.project.infra.sqldelight.dao
 
 import com.jetbrains.kotlin.cache.AppDatabase
-import org.example.project.infra.api.model.Links
-import org.example.project.infra.api.model.Patch
-import org.example.project.infra.api.model.RocketLaunch
+import org.example.project.domain.model.Links
+import org.example.project.domain.model.Patch
+import org.example.project.domain.model.RocketLaunch
 import org.example.project.infra.sqldelight.com.jetbrains.kotlin.cache.DatabaseDriverFactory
 
 internal class LaunchDao(

@@ -1,4 +1,4 @@
-package org.example.project.infra.api.model
+package org.example.project.domain.model
 
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toInstant
