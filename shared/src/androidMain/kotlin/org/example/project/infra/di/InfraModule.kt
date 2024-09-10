@@ -9,7 +9,7 @@ import org.example.project.infra.sqldelight.dao.LaunchDao
 import org.example.project.infra.sqldelight.datasource.SpaceXLocalDatasource
 import org.koin.dsl.module
 
-internal val infraModule = module {
+internal actual val infraModule = module {
     single<SpaceXApi> { SpaceXApi() }
     single<LaunchDao> {
         LaunchDao(

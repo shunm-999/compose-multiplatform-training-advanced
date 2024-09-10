@@ -9,7 +9,7 @@ internal class SpaceXRepositoryImpl(
     private val localDatasource: SpaceXLocalDatasource,
     private val remoteDatasource: SpaceXRemoteDatasource,
 ): SpaceXRepository {
-    override suspend fun getLaunched(forceReload: Boolean): List<RocketLaunch> = localDatasource.get(forceReload) {
+    override suspend fun getLaunchList(forceReload: Boolean): List<RocketLaunch> = localDatasource.get(forceReload) {
         remoteDatasource.get()
     }
 }
